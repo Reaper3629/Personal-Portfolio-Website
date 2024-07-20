@@ -1,35 +1,14 @@
 ---
-
+// Components Imports
+import Layout from "../layouts/Layout.astro"
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/initialLogo.png" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>&res Perez's Main Page</title>
-	</head>
-	<body>
-		<header>
-			<ul>
-				<li><a href="index.html">Home</a></li>
-				<li><a href="pages/projects.html">Projects</li>
-				<li><a href="pages/resume.html">Resume</a></li>
-				<li><a href="pages/contact.html">Contact</a></li>
-			</ul>
-			<h1>Welcome</h1>
-		</header>
+<Layout title="&res Perez's Home Page">
+    <p>
+       why hello there nathan, this astro and tailwind css is a lot of information but it's mangable; also look i scuffed a <strong>logo</strong>.
+    </p>
+</Layout>
 
-		<footer> 
-			<div> Created by <em>Andres Perez</em> on 7.16.2024 </div>
-			<div> Github <strong>Linkedin</strong> Discord Instagram</div>
-			<div id="trademark"> Created by <em>Andres Perez</em> on 7.16.2024 </div>
-			<ul id="social-links">
-				<li><a  id="github-page" href="#">Github</a></li>
-				<li><a  id="linkedin-page" href="#">Linkedin</a></li>
-				<li><a  id="instagram-page" href="#">Instagram</a></li>
-			</ul>
-		</footer>
-	</body>
-</html>
+<style>
+
+</style>

@@ -1,0 +1,20 @@
+---
+import Head from './Head.astro';
+
+interface Props {
+    title?: string;
+    description?: string;
+}
+
+const {
+    title="Work In Progress", 
+    description="Work In Progress,"
+} = Astro.props as Props;
+---
+
+<html lang="en">
+  <Head {title} {description} />
+  <body>
+    <slot> Default Text</slot>
+  </body>
+</html>
