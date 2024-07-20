@@ -31,26 +31,12 @@ nav a:hover {
     color: #96AA91; 
 }
 
+footer {
+    background-color:black;
+    color:white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
 
-
-
-
-
-
-/* .bg-main-color {
-    /* background-color: ; */
-   /* background-color: #212526; */
-/* } */
-
-/* .header-color { */
-    /* background-color: #2B1715; */
-    /* background-color: #817975; */
-    /* color: #796855;
-    background-color: #3b4142;
-    padding: 1rem;
-    margin: 1 rem;
-} */
-
-/* .text-color { */
-    /* color:#D5C7AC; */
-/* } */ 

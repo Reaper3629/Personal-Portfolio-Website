@@ -1,9 +1,6 @@
 # Personal-Portfolio-Website
 A respository tracking the development my portfolio website. Learning how to make website from scratch to track future projects and act as a blog.
 
-```sh
-npm create astro@latest -- --template minimal
-```
 
 [![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/minimal)
 [![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/minimal)
