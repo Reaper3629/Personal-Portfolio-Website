@@ -2,6 +2,8 @@
 // Components Imports
 import Layout from "../layouts/Layout.astro"
 
+import {Icon} from 'astro-icon/components';
+
 const currentYear = new Date().getFullYear();
 ---
 <Layout title="&res Perez's Home Page">
@@ -11,7 +13,7 @@ const currentYear = new Date().getFullYear();
         </div>
         <div slot="footer">
             <div>
-                Made with Astro, TailwindCSS
+                Made with Astro and TailwindCSS.
             </div>
             <div id="trademark">@ Andres Perez 2024 - {currentYear}</div>
             <ul id="social-links">
