@@ -2,11 +2,24 @@
 // Components Imports
 import Layout from "../layouts/Layout.astro"
 
+const currentYear = new Date().getFullYear();
 ---
 <Layout title="&res Perez's Home Page">
     <body>
         <div slot="main">
             <p>home_page</p>
+        </div>
+        <div slot="footer">
+            <div>
+                Made with Astro, TailwindCSS
+            </div>
+            <div id="trademark">@ Andres Perez 2024 - {currentYear}</div>
+            <ul id="social-links">
+                <li><a  id="github-page" href="#">Github</a></li>
+                <li><a  id="linkedin-page" href="#">Linkedin</a></li>
+                <li><a  id="instagram-page" href="#">Instagram</a></li>
+            </ul>
+
         </div>
     </body>
 </Layout>
