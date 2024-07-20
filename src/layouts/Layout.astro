@@ -1,5 +1,7 @@
 ---
 import Head from './Head.astro';
+import Header from './Header.astro';
+
 import '../styles/Base.css';
 
 interface Props {
@@ -14,8 +16,14 @@ const {
 ---
 
 <html lang="en">
-  <Head {title} {description} />
+  <Head {title} {description}/>
   <body>
-    <slot> Default Text</slot>
+    <Header/>
+    <main>
+      <slot name="main">default text</slot>
+    </main>
+    <footer>
+      <slot name="footer">default text</slot>
+    </footer>
   </body>
 </html>
