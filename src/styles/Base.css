@@ -15,7 +15,7 @@ main {
     display: flex;
     justify-content: space-between; 
     align-items: center;
-    padding: 0 1rem;
+    padding: 0 1rem;                     /*padding/margin: <top> <right> <bottom> <left>*/
 }
 #header-title:hover {
     color: #96AA91; 
