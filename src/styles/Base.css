@@ -10,49 +10,28 @@
     └── Footer 
         └── Icons           */
 
-/* Head */
-
 /* Header */
-#header-title:hover {
-    color: #96AA91; 
-}
+#header-title:hover {color: #96AA91;}
+    
 
 nav a {
     margin-left: 2rem;
 }
+nav a:hover {color: #96AA91;}
 
-nav a:hover {
-    color: #96AA91; 
+/* Main */
+div h1 {
+    font-size: 2rem;
+}
+
+.center {   
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 /* Footer */
-#github-repo {
-    color: #96AA91;  
-}
-#github-repo:hover {
-    color: white;  
-}
+#github-repo {color: #96AA91;}
 
-
-
-
-
-
-
-
-.bg-min-height {
-    height:100;
-    width: 100%;
-}
-
-.flex-container {
-    /* Align items to the left and right; Vertically center items within the contain; add padding to the containg*/
-    display: flex;
-    justify-content: space-between; 
-    align-items: center;
-    padding: 0 1rem;                     /*padding/margin: <top> <right> <bottom> <left>*/
-}
-
-
-
-
+#github-repo:hover {color: white;}

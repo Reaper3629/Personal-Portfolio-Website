@@ -3,5 +3,27 @@
 import Layout from "../layouts/Layout.astro"
 ---
 <Layout title="&res Perez's Home Page">
-    <div slot="main" class="bg-blue-950 bg-min-height bg-cover"><p>home_page</p></div>
+    <div slot="main" class="bg-zinc-800 text-white p-4 min-h-screen bg-cover">
+        <div class="flex flex-col items-center rounded-md center border-gray-500 border-2 w-1/2 p-2">
+            <div>
+                <h1 class="text-center">Welcome!</h1>
+            </div>
+            <div>
+                <img src ="/PFP.jpg" alt="Placeholder image until I get a professional one." class="rounded-lg shadow-lg">
+            </div>
+            <div>
+                <p class="indent-8">
+                    I am Andres Perez, an incoming freshman at the University of Notre Dame, studying engineering! <br>
+                    Thoughout high school, I have been exposed to different aspects of S.T.E.M. Ranging from undergradate <br>
+                    maths to computer programming. While I am still figuring out which path to pursue within the field, <br>
+                    I am interested in learning more about robotics, electronics, and programming. <br>
+                </p>
+                <p class="indent-8">
+                    I have experiences working a student tutor for Junior and Senior years, leading and mangaging the <br>
+                    engineering design process during my time as Build Lead and Captain in VEX robotics, and collaborated <br>
+                    within a team to design and produce a prototype of a smart walker during my time apart of an InventTeam. 
+                </p>
+            </div>
+        </div>
+    </div>
 </Layout>
