@@ -2,11 +2,49 @@
 @tailwind components;
 @tailwind utilities;
 
-header {
-    background-color: black;
-    color:white;
-    padding:1rem;
+/*  Needed to function   */
+/*
+    Layout
+    ├── Head
+    ├── Header
+    └── Footer 
+        └── Icons           */
+
+/* Head */
+
+/* Header */
+#header-title:hover {
+    color: #96AA91; 
 }
+
+nav a {
+    margin-left: 2rem;
+}
+
+nav a:hover {
+    color: #96AA91; 
+}
+
+/* Footer */
+#github-repo {
+    color: #96AA91;  
+}
+#github-repo:hover {
+    color: white;  
+}
+
+
+
+
+
+
+
+
+.bg-min-height {
+    height:100;
+    width: 100%;
+}
+
 .flex-container {
     /* Align items to the left and right; Vertically center items within the contain; add padding to the containg*/
     display: flex;
@@ -14,33 +52,7 @@ header {
     align-items: center;
     padding: 0 1rem;                     /*padding/margin: <top> <right> <bottom> <left>*/
 }
-#header-title:hover {
-    color: #96AA91; 
-}
 
-#github-repo {
-    color: #96AA91;  
-}
-#github-repo:hover {
-    color: white;  
-}
-nav a {
-    /*Removes the nav to the left; removes the underline*/
-    margin-left: 2rem;
-    text-decoration: none;
-    color: white;
-}
-nav a:hover {
-    /* Change color on hover */
-    color: #96AA91; 
-}
 
-footer {
-    background-color:black;
-    color:white;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-}
+
 
