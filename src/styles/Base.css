@@ -7,9 +7,6 @@ header {
     color:white;
     padding:1rem;
 }
-main {
-    background-color: rgb(43, 42, 42);
-}
 .flex-container {
     /* Align items to the left and right; Vertically center items within the contain; add padding to the containg*/
     display: flex;
@@ -19,6 +16,13 @@ main {
 }
 #header-title:hover {
     color: #96AA91; 
+}
+
+#github-repo {
+    color: #96AA91;  
+}
+#github-repo:hover {
+    color: white;  
 }
 nav a {
     /*Removes the nav to the left; removes the underline*/

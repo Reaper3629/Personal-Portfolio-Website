@@ -1,0 +1,17 @@
+---
+import {Icon} from 'astro-icon/components';
+const { currentYear } = Astro.props;
+
+
+---
+<footer class = "flex justify-between items-center border border-gray-500 p-4">
+    <div id="trademark" class="flex-1 text-center font-thin">
+        Made with Astro and TailwindCSS. Check out the <a id="github-repo" href="https://github.com/Reaper3629/Reaper3629.github.io">Github</a> here. @ Andres Perez 2024 - {currentYear}
+    </div>
+    <div class="icons flex items-center space-x-4">
+        <a href="https://github.com/Reaper3629" class="inline-block"><Icon name="mdi:github" size={30}></Icon></a>
+        <a href="https://www.linkedin.com/in/andres-perez0/" class="inline-block"><Icon name="mdi:linkedin" size={30}></Icon></a>
+        <a href="https://www.instagram.com/chitoperez1990/" class="inline-block"><Icon name="mdi:instagram" size={30}></Icon></a>
+        <a href="https://discordapp.com/users/659599215101476874" class="inline-block"><Icon name="mdi:discord" size={30}></Icon></a>
+    </div>
+</footer>
