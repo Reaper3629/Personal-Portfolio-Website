@@ -28,6 +28,10 @@ div h1 {
     box-shadow: 0px 0px 8px#96AA91;
 } 
 
+/* Projects */
+#miguel-tag {
+    color: #D8C787;
+}
 
 /* Footer */
 #github-repo {color: #96AA91;}
