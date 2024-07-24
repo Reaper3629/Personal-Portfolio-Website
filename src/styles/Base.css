@@ -11,7 +11,7 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Variables */
+/* Default Variables */
 :root {
     --accent-color: #7389f4;
     --border-color: #7389f4;
@@ -19,11 +19,20 @@
     --default-width: 50%;
 }
 
-@media (max-width: 	600px) {
-    :root {
-        --default-width: 90%;
-    }
-}
+/* Bottom value */
+@media (min-width: 	50px) {:root {--default-width: 95%;}}
+/* XS */
+@media (min-width: 	475px) {:root {--default-width: 95%;}}
+/* SM */
+@media (min-width: 	640px) {:root {--default-width: 90%;}}
+/* MD */
+@media (min-width: 	768px) {:root {--default-width: 80%;}}
+/* Lg */
+@media (min-width: 	1024px) {:root {--default-width: 70%;}}
+/* xl */
+@media (min-width: 	1280px) {:root {--default-width: 60%;}}
+/* 2xl */
+@media (min-width: 	1536px) {:root {--default-width: 50%;}}
 
 #divide-color {border-color:var(--border-color);}
 
