@@ -1,39 +1,48 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/*  Needed to function   */
 /*
     Layout
     ├── Head
     ├── Header
     └── Footer 
-        └── Icons           */
+        └── Icons           
+*/
+
+/* The integration's default injected base.css file */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Variables */
+:root {
+    --accent-color: #7389f4;
+    --border-color: #7389f4;
+    --font-color: rgb(255, 255, 255);
+}
+
+#divide-color {border-color:var(--border-color);}
 
 /* Header */
-#header-title:hover {color: #96AA91;}
-    
+header {color: var(--font-color);}
 
-nav a {
-    margin-left: 2rem;
-}
-nav a:hover {color: #96AA91;}
+#header-title:hover {color: var(--accent-color);}
+    
+#pages-link {margin-left: 2rem;}
+#pages-link:hover {color: var(--accent-color);}
 
 /* Main */
-div h1 {
-    font-size: 2rem;
-}
+#main-div{color: var(--font-color);}
 
-.hover-shadow:hover {
-    box-shadow: 0px 0px 8px#96AA91;
-} 
+.hover-shadow:hover {box-shadow: 0px 0px 8px var(--accent-color);} 
+
+/* Main:Index */
+#header-tag {font-size: 2rem;}
 
 /* Projects */
-#miguel-tag {
-    color: #D8C787;
-}
+#miguel-tag {color: #D8C787;}
 
 /* Footer */
-#github-repo {color: #96AA91;}
+footer {color: var(--font-color);}
 
-#github-repo:hover {color: white;}
+#github-repo {color: var(--accent-color);}
+#github-repo:hover {color: var(--font-color);}
+
+#social-link:hover {color: var(--accent-color);} /* Social links */
