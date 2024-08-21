@@ -53,6 +53,22 @@ import Layout from "../layouts/Layout.astro"
                             Add images of ESP-32s and motors
                             Embed video of the final working module
                     </div>
+                    <section class="container">
+                        <div class="slider-wrapper">
+                            <div class="slider">
+                                <img id="slide-1" src="/EDDPhoto1.jpg" alt="Final EDD Module Completed">
+                                <img id="slide-2" src="/EDDPhoto2.jpg" alt="Final EDD Module Completed; Far View">
+                                <img id="slide-3" src="/EDDPhoto3.jpg" alt="EDD-Borrow Home Soldering Set Up">
+                                <img id="slide-4" src="/EDDPhoto4.jpg" alt="Work Bench">
+                            </div>
+                            <div class="slide-nav">
+                                <a href="#slide-1"></a>
+                                <a href="#slide-2"></a>
+                                <a href="#slide-3"></a>
+                                <a href="#slide-4"></a>
+                            </div>
+                        </div>
+                    </section>
                 </div>
                 <div id="website-div" class="flex flex-col rounded-md border-2 w-auto mx-4 my-4 p-2 hover-shadow">
                     <div>
@@ -71,3 +87,48 @@ import Layout from "../layouts/Layout.astro"
         </div>
     </body>
 </Layout>
+
+<style>
+    .container {
+        padding: 2rem;
+    }
+    .slider-wrapper{
+        position: relative;
+        max-width: 48rem;
+        margin: 0 auto;
+    }
+    .slider{
+        display: flex;
+        aspect-ratio: 16/9;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
+        border-radius: 0.5rem;
+    }
+    .slider img {
+        flex: 1 0 100%;
+        scroll-snap-align: start;
+        object-fit: cover;
+    }
+    .slider-nav {
+        display: flex;
+        column-gap: 1rem;
+        position: absolute;
+        bottom: 1.25rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 1;
+    }
+    .slider-nav a {
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 50%;
+        background-color: #fff;
+        opacity: 0.75;
+        transition: opacity ease 250ms;
+    }
+    .slider-nav a:hover{
+       opacity: 1; 
+    }
+</style>
