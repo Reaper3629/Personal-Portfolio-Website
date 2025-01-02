@@ -1,62 +1,155 @@
 ---
 // Components Imports
 import Layout from "../layouts/Layout.astro"
+
+export const vex_skills = [ "C++", 
+                            "Fusion 360"];
+export const vex_awards = [ "Excellence Award (State Qualifier)",
+                            "Innovate Award (State Qualifier)", 
+                            "Design Award", "Judges Award",];
+export const invent_skills = ["Fusion 360"];
+export const carpa_skills = ["Lithium Iron Phosphate Batteries", "Circuits"];
+export const edd_skills = ["Soldering","Electronics"];
+export const irishsat_skills = ["C", "Python", 
+                                "Arduino", "Electronics", 
+                                "KiCad"];
+export const irishsat_github = [{name: "IrishSat", url: "https://github.com/ND-IrishSat"}, {name: "Helmotlz Cage", url: "https://github.com/ND-IrishSat/Helmholtz-24-25"},
+                                {name: "Goat PCB", url: "https://github.com/ND-IrishSat/GOAT-PCB"}, {name: "Txt Writer", url: "https://github.com/andres-perez0/GoatLab-ArduinoTextWriter"},];
 ---
 
 <Layout title="Projects - Andres Perez">
     <body>
         <div slot="main" class="bg-zinc-800 h-fit bg-cover flex flex-row justify-center items-center">
             <div id="main-div" class="m-0 p-0">
-                <div id="intro-div" class="flex flex-col rounded-md border-2 w-auto mx-4 my-4 p-2 hover-shadow">
+
+                <div id="intro-div" class="flex flex-col rounded-md border-2 w-auto mx-4 my-4 p-5 hover-shadow">
                     <div>
                         <h1 id="header-tag" class="text-center">Projects</h1>
                     </div>
-                    <div class="indent-8 break-words">
-                        <p>
-                            Hello! Welcome again! I knew that going into university, I would need to be prepared for the new challenges 
-                            and developments I would encounter. So, I thought it would be a fun venture to learn how to make a website 
-                            to track and document the projects I want to do. I was also inspired to start this after seeing how amazing my 
-                            friend <a id="miguel-tag" href="https://github.com/Kaweees">Miguel VF</a>'s <a id="miguel-tag" href="https://miguelvf.dev/">website</a> looked!
-                            <br><br>
+                    <div class="indent-8 break-words my-2">
+                        <p> Hello! Welcome again! I knew that going into university, I would need to be prepared for the new challenges 
+                        and developments I would encounter. So, I thought it would be a fun venture to learn how to make a website 
+                        to track and document the projects I want to do. I was also inspired to start this after seeing how amazing my 
+                        friend <a id="miguel-tag" href="https://github.com/Kaweees">Miguel VF</a>'s <a id="miguel-tag" href="https://miguelvf.dev/">website</a> looked!
                         </p>
-                        <p>
-                            So below are some notable things I've built or helped built. (*note: I am only really starting out so it may be
-                            quite barren for a while.) 
+                        <p> So below are some notable things I've built or helped built. (*note: I am only really starting out so it may be
+                        quite barren for a while.) 
                         </p>
                     </div>
                 </div>
-                <div id="VEX-div" class="flex flex-col rounded-md border-2 w-auto mx-4 my-4 p-2 hover-shadow">
+
+                <div id="irishsat-div" class="flex flex-col rounded-md border-2 w-auto mx-4 my-4 p-5 hover-shadow">
+                    <div>
+                        <h1 id="header-tag" class="text-center">IrishSat - GoatLab!🍀</h1>
+                    </div>
+                    <div id="sub-header-tag" class="flex justify-between">
+                        <h3><em>University of Notre Dame</em></h3>
+                        <h3><em>Aug. 2024 - Present</em></h3>
+                    </div>
+                    <div class="indent-8 break-words my-2">
+                        <p> IrishSat's Helmholtz Cage project has been a defining experience in my journey, 
+                        providing hands-on opportunities to integrate hardware and software in real-world applications. Collaborating 
+                        with a dedicated team, I developed a Python program to process serial data from a magnetometer and Arduino, 
+                        enabling seamless conversion of magnetic vector readings into MATLAB-readable files. Under expert mentorship, 
+                        I honed my skills in KiCad, MATLAB, and Raspberry Pi, contributing to iterative improvements in our Helmholtz 
+                        Cage design. Taking ownership of circuit optimization, I designed a custom Arduino R3 hat PCB to compact circuits, 
+                        carefully selecting components and managing footprints. Pair programming allowed me to support the final magnetometer 
+                        driver programming, while I also designed a Python GUI to interface with a Raspberry Pi, enabling manual and 
+                        PID-controlled magnetic field adjustments and visualizing dynamic field-time graphs. </p>
+                        <p> This project has reinforced my passion for interdisciplinary problem-solving and has inspired future goals, 
+                        such as implementing PySol for coordinate-based field simulation and enhancing our PCB and GUI designs.
+                        </p>
+                    </div>
+                    <div class="flex flex-wrap justify-evenly break-words my-2">
+                        <div class="indent-8 w-full sm:w-1/2">
+                            <h3> Githubs: </h3>
+                            <ul>
+                                {irishsat_github.map(github => (
+                                  <li class="indent-16">
+                                    <a id="github-repo" href={github.url} target="_blank" rel="noopener noreferrer">{github.name}</a>
+                                  </li>
+                                ))}
+                            </ul>
+                        </div>
+                        <div class="indent-8 w-full sm:w-1/2">
+                            <h3> Key Skills: </h3>
+                            <ul> {irishsat_skills.map(skill => (<li class="indent-16">{skill}</li>))} </ul>
+                        </div>
+                    </div>
+                    <section class="container">
+                        <p class="flex justify-center items-center my-2"><em>Swipe through the slides below to see highlights!</em></p>
+                        <div class="slider-wrapper">
+                            <div class="slider">
+                                <img id="slide-1" src="/projects/IrishSat/IrishSatPhoto1.png" alt="">
+                                <img id="slide-2" src="/projects/IrishSat/IrishSatPhoto2.png" alt="">
+                                <img id="slide-3" src="/projects/IrishSat/IrishSatPhoto3.png" alt="">
+                                <img id="slide-4" src="/projects/IrishSat/IrishSatPhoto4.png" alt="">
+                            <div class="slide-nav">
+                                <a href="#slide-1"></a>
+                                <a href="#slide-2"></a>
+                                <a href="#slide-3"></a>
+                                <a href="#slide-4"></a>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <div id="rfc-div" class="flex flex-col rounded-md border-2 w-auto mx-4 my-4 p-5 hover-shadow">
+                    <div>
+                        <h1 id="header-tag" class="text-center">Robotic Football Club 🏈</h1>
+                    </div>
+                    <div id="sub-header-tag" class="flex justify-between">
+                        <h3><em>University of Notre Dame</em></h3>
+                        <h3><em>Aug. 2024 - Present</em></h3>
+                    </div>
+                    <div class="indent-8 break-words my-2">
+                        <p> Work in Progress ... </p>
+                        <p></p>
+                    </div>
+                    <div class="indent-8 w-full sm:w-1/2">
+                        <h3> Key Skills: </h3>
+                        <!-- <ul> {irishsat_skills.map(skill => (<li class="indent-16">{skill}</li>))} </ul> -->
+                    </div>
+                    <!-- <section class="container">
+                        <p class="flex justify-center items-center my-2"><em>Swipe through the slides below to see highlights!</em></p>
+                        <div class="slider-wrapper">
+                            <div class="slider"></div>
+                            <div class="slide-nav"></div>
+                        </div>
+                    </section> -->
+                </div>
+
+                <div id="VEX-div" class="flex flex-col rounded-md border-2 w-auto mx-4 my-4 p-5 hover-shadow">
                     <div>
                         <h1 id="header-tag" class="text-center">VEX Robotics 🤖</h1>
                     </div>
-                    <div id="sub-header-tag" class="flex justify-between p-1 text-sm">
-                        <h3>
-                            California Academy of Math & Science
-                        </h3>
-                        <h3>
-                            Aug. 2021 - Oct. 2023
-                        </h3>
+                    <div id="sub-header-tag" class="flex justify-between">
+                        <h3><em>California Academy of Math & Science</em></h3>
+                        <h3><em>Aug. 2021 - Oct. 2023</em></h3>
                     </div>
-                    <div id="VEX-project-tag" class="indent-8 break-words">
-                        VEX Robotics has been the largest influence in my decision to pursue engineering. I was part of the 687B Nerd Herd! 
-                        VEX was my first experience with a STEM curriculum, where I started on the mechanical team. 
-                        Here, I learned about the engineering design process, CAD software like Fusion 360, and mechanical assembly.
-                        Eventually, I was promoted to captain of my team, and along with my co-captain, we led a team of 12. We hosted meetings,
-                        tracked participation, and continuously worked to improve our design and code for competitions.
-                        <br><br>
+                    <div id="VEX-project-tag" class="indent-8 break-words my-2">
+                        <p> VEX Robotics has been the most significant influence in my decision to pursue engineering. As a member of 
+                        Team 687B Nerd Herd, I gained my first exposure to a STEM curriculum. Starting on the mechanical 
+                        team, I learned the engineering design process, used CAD software like Fusion 360, 
+                        and honed my skills in mechanical assembly.
+                        </p>
+                        <p> Over time, I was promoted to team captain, where I co-led a group of 12 members. Together with my 
+                        co-captain, I organized team meetings, tracked participation, and drove continuous improvements in our designs and 
+                        code to compete at a high level.
+                        </p>
                     </div>
-                    <div class="indent-8 break-words">
-                        This was a life-changing experience that shifted my focus toward engineering and taught me to give my all to my projects. <br><br>
-                    </div>
-                    <div class="indent-8 break-words">
-                        Skills: C++; Fusion 360
-                    </div>
-                    <div class="indent-8 break-words">
-                        Awards: Excellence:State Qualifer; Innovate:State Qualifer; Design; Judges
-                        <br><br>
-                        (the images below are slides; Please take a swipe!)
+                    <div class="flex flex-wrap justify-evenly break-words my-2">
+                        <div class="indent-8 w-full sm:w-1/2">
+                            <h3> Key Skills: </h3>
+                            <ul> {vex_skills.map(skill => (<li class="indent-16">{skill}</li>))} </ul>
+                        </div>
+                        <div class="indent-8 w-full sm:w-1/2">
+                            <h3> Awards: </h3>
+                            <ul> {vex_awards.map(award => (<li class="indent-16">{award}</li>))} </ul>
+                        </div>
                     </div>
                     <section class="container">
+                        <p class="flex justify-center items-center my-2"><em>Swipe through the slides below to see highlights!</em></p>
                         <div class="slider-wrapper">
                             <div class="slider">
                                 <img id="slide-1" src="/projects/VEX/VEXPhoto1.jpg" alt="">
@@ -81,31 +174,31 @@ import Layout from "../layouts/Layout.astro"
                         </div>
                     </section>
                 </div>
-                <div id="InvenTeam-div" class="flex flex-col rounded-md border-2 w-auto mx-4 my-4 p-2 hover-shadow">
+
+                
+                <div id="inventeam-div" class="flex flex-col rounded-md border-2 w-auto mx-4 my-4 p-5 hover-shadow">
                     <div>
                         <h1 id="header-tag" class="text-center">MIT InvenTeam 🦞</h1>
                     </div>
-                    <div id="sub-header-tag" class="flex justify-between p-1 text-sm">
-                        <h3>
-                            Palos Verdes, Ca
-                        </h3>
-                        <h3>
-                            Aug. 2022 - Nov. 2023
-                        </h3>
+                    <div id="sub-header-tag" class="flex justify-between">
+                        <h3><em>Palos Verdes, Ca</em></h3>
+                        <h3><em>Aug. 2022 - Nov. 2023</em></h3>
                     </div>
-                    <div id="Invent-project-tag" class="indent-8 break-words">
-                        Although it was a smaller commitment, the MIT InvenTeam revolutionized how I viewed engineering. We identified a problem 
+                    <div id="Invent-project-tag" class="indent-8 break-words my-2">
+                        <p> Although it was a smaller commitment, the MIT InvenTeam revolutionized how I viewed engineering. We identified a problem 
                         within the community, isolated possible solutions, and received real feedback from our customer base. Working with a team 
                         of 15, we drafted a winning proposal and secured a $7,500 grant as one of ten selected teams, focusing on design solutions 
                         for larger urban and tourist areas in my hometown. Furthermore, I practiced my Fusion 360 skills for the design and stress 
                         testing of critical Smart Walker components, including the frame, seat, and handles. I experienced firsthand the iterative 
                         prototyping of a product to refine the Smart Walker for presentation at the 2023 Lemelson-MIT EurekaFest.
-                        <br><br>
+                        </p>
                     </div>
-                    <div class="indent-8 break-words">
-                        Skills: Fusion 360
+                    <div class="indent-8 w-full sm:w-1/2">
+                        <h3> Key Skills: </h3>
+                        <ul> {invent_skills.map(skill => (<li class="indent-16">{skill}</li>))} </ul>
                     </div>
                     <section class="container">
+                        <p class="flex justify-center items-center my-2"><em>Swipe through the slides below to see highlights!</em></p>
                         <div class="slider-wrapper">
                             <div class="slider">
                                 <img id="slide-1" src="/projects/InvenTeam/InventPhoto1.jpg" alt="">
@@ -124,36 +217,32 @@ import Layout from "../layouts/Layout.astro"
                         </div>
                     </section>
                 </div>
-                <div id="EDD-div" class="flex flex-col rounded-md border-2 w-auto mx-4 my-4 p-2 hover-shadow">
+                <div id="edd-div" class="flex flex-col rounded-md border-2 w-auto mx-4 my-4 p-5 hover-shadow">
                     <div>
                         <h1 id="header-tag" class="text-center">Engineering Design & Development 🔧</h1>
                     </div>
-                    <div id="sub-header-tag" class="flex justify-between p-1 text-sm">
-                        <h3>
-                            California Academy of Math & Science
-                        </h3>
-                        <h3>
-                            Aug. 2023 - Jun. 2024
-                        </h3>
+                    <div id="sub-header-tag" class="flex justify-between">
+                        <h3><em>California Academy of Math & Science</em></h3>
+                        <h3><em>Aug. 2023 - Jun. 2024</em></h3>
                     </div>
-                    <div class="break-words self-center">
-                        <a id="github-repo" href="https://www.youtube.com/watch?v=zvDc4tibHWs"> Watch the demonstration here! </a>
-                    </div>
-                    <div class="indent-8 break-words">
-                        For my engineering design project class, we were tasked with designing and building a semi-autonomous suite of robotic mechanisms for use in exploring hazardous environments.
-
-                        To approach this, we broke the problem down into multiple components, and I joined the module group. In this group, I worked on the electrical aspects of the modules, where I learned soldering.
-
-                        For the actual modules, we decided to use an ESP-32 microcontroller with high-torque micro gear motors. We also included other components, such as a magnetic encoder, MOSFETs, and a TB6612FNG dual 
-                        motor driver carrier.
-                        <br><br>
+                    <div class="indent-8 break-words my-2">
+                        <a class="flex text-center justify-center" id="github-repo" href="https://www.youtube.com/watch?v=zvDc4tibHWs"> Watch the demonstration here!</a>
+                        <p> For my engineering design project class, we were tasked with designing and building a semi-autonomous suite of robotic 
+                        mechanisms for use in exploring hazardous environments. To approach this, we broke the problem down into multiple components, 
+                        and I joined the module group. In this group, I worked on the electrical aspects of the modules, where I learned soldering.
+                        For the actual modules, we decided to use an ESP-32 microcontroller with high-torque micro gear motors. We also included other 
+                        components, such as a magnetic encoder, MOSFETs, and a TB6612FNG dual motor driver carrier.
+                        </p>
                     </div>
                     <div class="indent-8 break-words">
-                        Skills: Soldering; Electronics
-                        <br><br>
-                        (the images below are slides; Please take a swipe!)
+                        <div class="indent-8 w-full sm:w-1/2">
+                            <h3> Key Skills: </h3>
+                            <ul> {edd_skills.map(skill => (<li class="indent-16">{skill}</li>))} </ul>
+                        </div>
                     </div>
+                    
                     <section class="container">
+                        <p class="flex justify-center items-center my-2"><em>Swipe through the slides below to see highlights!</em></p>
                         <div class="slider-wrapper">
                             <div class="slider">
                                 <img id="slide-1" src="/projects/EDD/EDDPhoto1.jpg" alt="Final EDD Module Completed">
@@ -176,33 +265,29 @@ import Layout from "../layouts/Layout.astro"
                         </div>
                     </section>
                 </div>
-                <div id="CARPA-div" class="flex flex-col rounded-md border-2 w-auto mx-4 my-4 p-2 hover-shadow">
+                <div id="carpa-div" class="flex flex-col rounded-md border-2 w-auto mx-4 my-4 p-5 hover-shadow">
                     <div>
                         <h1 id="header-tag" class="text-center">CARPA Racing Team 🏎️</h1>
                     </div>
-                    <div id="sub-header-tag" class="flex justify-between p-1 text-sm">
-                        <h3>
-                            California Academy of Math & Science
-                        </h3>
-                        <h3>
-                            Jan. 2024 - May. 2024
-                        </h3>
+                    <div id="sub-header-tag" class="flex justify-between">
+                        <h3><em>California Academy of Math & Science</em></h3>
+                        <h3><em>Jan. 2024 - May. 2024</em></h3>
                     </div>
-                    <div id="Racing-project-tag" class="indent-8 break-words">
-                        The CARPA Racing Team is a branch of the Engineering Design Class, where we had the opportunity to work on a race car designed 
-                        for energy efficiency. However, safety was our highest priority, so we avoided making drastic measures to reduce weight.
-                        <br><br>
-                    </div>
-                    <div id="Racing-project-tag" class="indent-8 break-words">
-                        In this project, we replaced and maintained the race cars from previous years. I had the opportunity to learn about the car's circuitry 
+                    <div id="Racing-project-tag" class="indent-8 break-words my-2">
+                        <p> The CARPA Racing Team is a branch of the Engineering Design Class, where we had the opportunity to work on a race car designed 
+                        for energy efficiency. However, safety was our highest priority, so we avoided making drastic measures to reduce weight.       
+                        </p>
+                        <p> In this project, we replaced and maintained the race cars from previous years. I had the opportunity to learn about the car's circuitry 
                         and connect various components. We also utilized LiFe batteries. By physically replacing the disk brakes and motors, we were able 
                         to reduce the heat generated during prolonged use, ultimately increasing electric efficiency.
-                        <br><br>
+                        </p>
+                    </div>
+                    <div class="indent-8 w-full sm:w-1/2">
+                        <h3> Key Skills: </h3>
+                        <ul> {edd_skills.map(skill => (<li class="indent-16">{skill}</li>))} </ul>
                     </div>
                     <div class="indent-8 break-words">
-                        Skills: Lithium Iron Phosphate Batteries, Circuits
-                    </div>
-                    <div class="indent-8 break-words">
+                        <p class="flex justify-center items-center my-2"><em>Swipe through the slides below to see highlights!</em></p>
                         <section class="container">
                             <div class="slider-wrapper">
                                 <div class="slider">
@@ -225,49 +310,25 @@ import Layout from "../layouts/Layout.astro"
                         </section>
                     </div>
                 </div>
-                <div id="website-div" class="flex flex-col rounded-md border-2 w-auto mx-4 my-4 p-2 hover-shadow">
+                <div id="website-div" class="flex flex-col rounded-md border-2 w-auto mx-4 my-4 p-5 hover-shadow">
                     <div>
                         <h1 id="header-tag" class="text-center">This Website! 💻</h1>
                     </div>
-                    <div id="sub-header-tag" class="flex justify-between p-1 text-sm">
-                        <h3>
-                            Personal Project
-                        </h3>
-                        <h3>
-                            July. 2024 - Present
-                        </h3>
+                    <div id="sub-header-tag" class="flex justify-between">
+                        <h3><em>Personal Project</em></h3>
+                        <h3> <em>Jul. 2024 - Present</em></h3>
                     </div>
-                    <div class="indent-8 break-words">
-                        This is my most recent project (at the time of writing this). Regardless, it is my first actual software project, and in all 
+                    <div class="indent-8 break-words my-2">
+                        <p> This is my most recent project (at the time of writing this). Regardless, it is my first actual software project, and in all 
                         honesty, it's been pretty fun learning HTML and CSS with bits of JavaScript. I'm still a novice when it comes to frameworks, 
                         but I'd say utilized Astro and Tailwind CSS to a successful degree. The source code is linked <a id="github-repo" href="https://github.com/Reaper3629/Reaper3629.github.io">here</a> and below, and I do recommend 
                         people try making their own websites. It gives you a better idea of how other websites are structured and provides a 
                         platform to constantly iterate on and watch develop. As of writing this, I know it's a bit simplistic, but I am excited to 
                         explore other avenues of website development and see how I can update this site!
-                    </div>
-                </div>
-                <div id="PIG-div" class="flex flex-col rounded-md border-2 w-auto mx-4 my-4 p-2 hover-shadow">
-                    <div>
-                        <h1 id="header-tag" class="text-center">IrishSat - GoatLab! 🍀</h1>
-                    </div>
-                    <div class="indent-8 break-words">
-                        <p>
-                            Work in progress ...
-                            <br><br>
-
-                            <a id="github-repo" href="https://ndirishsat.com/">IrishSat</a>
-                            <br><br>
-
-                            <a id="github-repo" href="https://ndirishsat.com/projects/goatlab/">GoatLab</a>
-                            <br><br>
-
-                            My Projects: 
-                            <a id="github-repo" href="https://github.com/andres-perez0/GoatLab-ArduinoTextWriter">GoatLab-ArduinoTextWriter</a>
-                            <br><br>
-
                         </p>
                     </div>
                 </div>
+                
             </div>
         </div>
     </body>
@@ -275,7 +336,7 @@ import Layout from "../layouts/Layout.astro"
 
 <style>
     .container {
-        padding: 2rem;
+        margin: 0 auto;
     }
     .slider-wrapper{
         position: relative;
